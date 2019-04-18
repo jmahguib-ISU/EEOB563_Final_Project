@@ -1,0 +1,80 @@
+
+
+---------------------------------------------------------------------------------------
+
+###Scripts for checking alignment input files to see if they will run in raxml
+
+raxml-ng --check --msa Tolkien_concat_align.txt --model MULTI8_MK --prefix OptiCheckConcat
+raxml-ng --check --msa Tolkien_physio_align.txt --model MULTI8_MK --prefix OptiCheckPhysio
+raxml-ng --check --msa Tolkien_behav_align.txt --model MULTI6_MK --prefix OptiCheckBehav
+raxml-ng --check --msa Tolkien_arche_align.txt --model MULTI7_MK --prefix OptiCheckArche
+
+
+---------------------------------------------------------------------------------------
+
+###Scripts for searching the tree space of alignment files
+
+raxml-ng --msa Tolkien_concat_align.txt --outgroup Zerg_OG,Tyranids_OG,Xenomorphs_OG --model MULTI8_MK --prefix MLsearchConcat --threads 2 --seed 2 --tree pars{200},rand{200}
+
+
+
+raxml-ng --msa Tolkien_physio_align_zergOG.txt --outgroup Zerg_OG --model MULTI8_MK --prefix MLsearchPhysioZergOG --threads 1 --seed 2 --tree pars{200},rand{200}
+
+raxml-ng --msa Tolkien_physio_align_protossOG.txt --outgroup Protoss_OG --model MULTI8_MK --prefix MLsearchPhysioProtossOG --threads 1 --seed 2 --tree pars{200},rand{200}
+
+
+
+raxml-ng --msa Tolkien_behav_align_zergOG.txt --outgroup Zerg_OG --model MULTI6_MK --prefix MLsearchBehavZergOG --threads 1 --seed 2 --tree pars{200},rand{200}
+#[00:04:02] ML tree search #326, logLikelihood: -678.064489
+#ERROR: ERROR in SPR round (LIBPLL-2240): BL opt converged to a worse likelihood score by -0.000000000333102 units
+
+raxml-ng --msa Tolkien_behav_align_protossOG.txt --outgroup Protoss_OG --model MULTI6_MK --prefix MLsearchBehavProtossOG --threads 1 --seed 2 --tree pars{200},rand{200}
+#[00:03:55] ML tree search #326, logLikelihood: -665.881701
+#ERROR: ERROR in SPR round (LIBPLL-2240): BL opt converged to a worse likelihood score by -0.000000000343107 units
+
+
+raxml-ng --msa Tolkien_arche_align_zergOG.txt --outgroup Zerg_OG --model MULTI7_MK --prefix MLsearchArcheZergOG --threads 1 --seed 2 --tree pars{200},rand{200}
+
+raxml-ng --msa Tolkien_arche_align_protossOG.txt --outgroup Protoss_OG --model MULTI7_MK --prefix MLsearchArcheProtossOG --threads 1 --seed 2 --tree pars{200},rand{200}
+
+
+---------------------------------------------------------------------------------------
+
+###Scripts for bootstrap analyses
+
+raxml-ng --bootstrap --msa Tolkien_concat_align.txt --outgroup Zerg_OG,Tyranids_OG,Xenomorphs_OG --model MULTI8_MK --bs-trees 1000 --prefix BootstrapConcat --threads 1 --seed 2
+
+
+
+raxml-ng --bootstrap --msa Tolkien_physio_align_zergOG.txt --outgroup Zerg_OG --model MULTI8_MK --bs-trees 1000 --prefix BootstrapPhysioZergOG --threads 1 --seed 2
+#[00:03:02] Bootstrap tree #307, logLikelihood: -520.973144
+#ERROR: ERROR in SPR round (LIBPLL-2240): BL opt converged to a worse likelihood score by -0.000000002381739 units
+
+raxml-ng --bootstrap --msa Tolkien_physio_align_protossOG.txt --outgroup Protoss_OG --model MULTI8_MK --bs-trees 1000 --prefix BootstrapPhysioProtossOG --threads 1 --seed 2
+
+
+
+raxml-ng --bootstrap --msa Tolkien_arche_align_zergOG.txt --outgroup Zerg_OG --model MULTI7_MK --bs-trees 1000 --prefix BootstrapArcheZergOG --threads 1 --seed 2
+
+raxml-ng --bootstrap --msa Tolkien_arche_align_protossOG.txt --outgroup Protoss_OG --model MULTI7_MK --bs-trees 1000 --prefix BootstrapArcheProtossOG --threads 1 --seed 2
+
+
+---------------------------------------------------------------------------------------
+
+#Scripts for mapping bootstrap support values onto best trees
+
+raxml-ng --support --tree MLsearchConcat.raxml.bestTree --bs-trees BootstrapConcat.raxml.bootstraps --prefix MappedBootstrapsConcat --threads 1
+
+
+
+raxml-ng --support --tree MLsearchPhysioProtossOG.raxml.bestTree --bs-trees BootstrapPhysioProtossOG.raxml.bootstraps --prefix MappedBootstrapsPhysioProtossOG --threads 1
+
+
+
+raxml-ng --support --tree MLsearchArcheZergOG.raxml.bestTree --bs-trees BootstrapArcheZergOG.raxml.bootstraps --prefix MappedBootstrapsArcheZergOG --threads 1
+
+raxml-ng --support --tree MLsearchArcheProtossOG.raxml.bestTree --bs-trees BootstrapArcheProtossOG.raxml.bootstraps --prefix MappedBootstrapsArcheProtossOG --threads 1
+
+
+---------------------------------------------------------------------------------------
+

@@ -1,0 +1,50 @@
+
+RAxML-NG v. 0.8.0 BETA released on 11.01.2019 by The Exelixis Lab.
+Authors: Alexey Kozlov, Alexandros Stamatakis, Diego Darriba, Tomas Flouri, Benoit Morel.
+Latest version: https://github.com/amkozlov/raxml-ng
+Questions/problems/suggestions? Please visit: https://groups.google.com/forum/#!forum/raxml
+
+WARNING: This is a BETA release, please use at your own risk!
+
+RAxML-NG was called at 17-Apr-2019 22:13:46 as follows:
+
+raxml-ng --bootstrap --msa Tolkien_concat_align.txt --model MULTI8_MK --bs-trees 1000
+
+Analysis options:
+  run mode: Bootstrapping
+  start tree(s): 
+  bootstrap replicates: 1000
+  random seed: 1555557226
+  tip-inner: OFF
+  pattern compression: ON
+  per-rate scalers: OFF
+  site repeats: ON
+  branch lengths: proportional (ML estimate, algorithm: NR-FAST)
+  SIMD kernels: AVX
+  parallelization: PTHREADS (8 threads), thread pinning: OFF
+
+[00:00:00] Reading alignment from file: Tolkien_concat_align.txt
+[00:00:00] Loaded alignment with 36 taxa and 70 sites
+
+Alignment comprises 1 partitions and 68 patterns
+
+Partition 0: noname
+Model: MULTI8_MK
+Alignment sites / patterns: 70 / 68
+Gaps: 0.00 %
+Invariant sites: 0.00 %
+
+
+NOTE: Binary MSA file created: Tolkien_concat_align.txt.raxml.rba
+
+
+WARNING: You might be using too many threads (8) for your alignment with 68 unique patterns.
+NOTE:    For the optimal throughput, please consider using fewer threads 
+NOTE:    and parallelize across starting trees/bootstrap replicates.
+NOTE:    As a general rule-of-thumb, please assign at least 200-1000 alignment patterns per thread.
+
+
+ERROR: Too few patterns per thread! RAxML-NG will terminate now to avoid wasting resources.
+NOTE:  Please reduce the number of threads (see guidelines above).
+NOTE:  This check can be disabled with the '--force' option.
+

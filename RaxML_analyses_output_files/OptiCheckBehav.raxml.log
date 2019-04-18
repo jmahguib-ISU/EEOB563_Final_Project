@@ -1,0 +1,46 @@
+
+RAxML-NG v. 0.8.0 BETA released on 11.01.2019 by The Exelixis Lab.
+Authors: Alexey Kozlov, Alexandros Stamatakis, Diego Darriba, Tomas Flouri, Benoit Morel.
+Latest version: https://github.com/amkozlov/raxml-ng
+Questions/problems/suggestions? Please visit: https://groups.google.com/forum/#!forum/raxml
+
+WARNING: This is a BETA release, please use at your own risk!
+
+RAxML-NG was called at 17-Apr-2019 09:50:49 as follows:
+
+raxml-ng --check --msa Tolkien_behav_align.txt --model MULTI6_MK --prefix OptiCheckBehav
+
+Analysis options:
+  run mode: Alignment validation
+  start tree(s): 
+  random seed: 1555512649
+  SIMD kernels: AVX
+  parallelization: PTHREADS (8 threads), thread pinning: OFF
+
+[00:00:00] Reading alignment from file: Tolkien_behav_align.txt
+[00:00:00] Loaded alignment with 36 taxa and 20 sites
+
+WARNING: Sequences Zerg_OG and Tyranids_OG are exactly identical!
+WARNING: Duplicate sequences found: 1
+
+NOTE: Reduced alignment (with duplicates and gap-only sites/taxa removed) 
+NOTE: was saved to: /home/jmahguib/EEOB563-Spring2019/Final_Project/OptiCheckBehav.raxml.reduced.phy
+
+Alignment comprises 1 partitions and 20 patterns
+
+Partition 0: noname
+Model: MULTI6_MK
+Alignment sites / patterns: 20 / 20
+Gaps: 0.00 %
+Invariant sites: 0.00 %
+
+
+Alignment can be successfully read by RAxML-NG.
+
+
+Execution log saved to: /home/jmahguib/EEOB563-Spring2019/Final_Project/OptiCheckBehav.raxml.log
+
+Analysis started: 17-Apr-2019 09:50:49 / finished: 17-Apr-2019 09:50:49
+
+Elapsed time: 0.007 seconds
+
