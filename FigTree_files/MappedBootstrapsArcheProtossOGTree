@@ -1,6 +1,6 @@
 #NEXUS
 begin taxa;
-	dimensions ntax=36;
+	dimensions ntax=33;
 	taxlabels
 	Altmer_ES
 	Dark_Eldar_40K
@@ -35,14 +35,11 @@ begin taxa;
 	Orsimer_ES
 	Protoss_OG
 	Squats_40K
-	Tyranids_OG
-	Xenomorphs_OG
-	Zerg_OG
 ;
 end;
 
 begin trees;
-	tree tree_1 = [&R] ((Orks_40K:0.031008,((Orcs_LotR:0.097573,(Orcs_FR:1.0E-6,(Orsimer_ES:0.037085,(Orcs_WC:0.089468,((((((Dwarves_WC:0.117322,(Dwemer_ES:0.459702,Dwarves_WH:0.025518)[&"Bootstrap Support"=10]:0.053745)[&"Bootstrap Support"=10]:0.058278,(Dwarves_FR:0.060831,Dwarves_LotR:0.140653)[&"Bootstrap Support"=42]:0.021078)[&"Bootstrap Support"=14]:0.096304,(Squats_40K:1.0E-6,Humans_40K:0.435148)[&"Bootstrap Support"=56]:0.254026)[&"Bootstrap Support"=14]:0.129026,Dwarves_W:0.043923)[&"Bootstrap Support"=11]:0.036151,(Elves_W:0.107856,((Altmer_ES:0.125536,(((Drow_FR:0.054405,(Dark_Eldar_40K:0.3153,Dark_Elves_WH:0.04836)[&"Bootstrap Support"=53]:0.261172)[&"Bootstrap Support"=38]:0.168959,Dunmer_ES:0.083564)[&"Bootstrap Support"=26]:0.171042,(High_Elves_WC:0.218547,(((Eldar_40K:0.139742,Protoss_OG:0.491209)[&"Bootstrap Support"=55]:0.21101,High_Elves_WH:1.0E-6)[&"Bootstrap Support"=22]:0.038187,(Night_Elves_WC:0.332732,Elves_LotR:0.065802)[&"Bootstrap Support"=32]:0.119952)[&"Bootstrap Support"=16]:0.151757)[&"Bootstrap Support"=13]:0.075676)[&"Bootstrap Support"=14]:0.045644)[&"Bootstrap Support"=17,!rotate=true]:0.117384,Elves_FR:0.099924)[&"Bootstrap Support"=11]:0.063594)[&"Bootstrap Support"=39,!rotate=true]:0.271519)[&"Bootstrap Support"=19,!rotate=true]:0.192659,(((Humans_FR:0.014649,((Humans_WH:0.035458,Humans_LotR:0.072105)[&"Bootstrap Support"=63]:0.089211,Humans_WC:0.029799)[&"Bootstrap Support"=14]:0.028757)[&"Bootstrap Support"=7]:0.029149,Humans_W:0.075391)[&"Bootstrap Support"=9]:0.044153,Humans_ES:1.0E-6)[&"Bootstrap Support"=9]:0.015641)[&"Bootstrap Support"=65]:0.205323)[&"Bootstrap Support"=70,!rotate=true]:0.143409)[&"Bootstrap Support"=99,!rotate=true]:0.574858)[&"Bootstrap Support"=75,!rotate=true]:0.149896)[&"Bootstrap Support"=92,!rotate=true]:0.366025,Orcs_WH:1.0E-6)[&"Bootstrap Support"=51,!rotate=false]:0.012661)[&"Bootstrap Support"=100,!rotate=true]:0.592766,(Tyranids_OG:0.045395,Zerg_OG:0.045644)[&"Bootstrap Support"=100]:0.280658,Xenomorphs_OG:0.004676)[&"Bootstrap Support"=100];
+	tree tree_1 = [&R] (Protoss_OG:0.205782,Eldar_40K:0.390513,(Dark_Eldar_40K:1.0E-6,(Dark_Elves_WH:0.0647,(Drow_FR:1.0E-6,((((((Squats_40K:0.518223,Dwemer_ES:1.0E-6)[&"Bootstrap Support"=48]:0.256183,High_Elves_WC:0.343007)[&"Bootstrap Support"=3]:0.122214,Dwarves_WH:0.061205)[&"Bootstrap Support"=4]:0.094378,(Dwarves_WC:0.066761,Dwarves_LotR:0.2546)[&"Bootstrap Support"=54]:0.126947)[&"Bootstrap Support"=10]:0.257145,Dwarves_FR:1.0E-6)[&"Bootstrap Support"=3]:1.0E-6,(Altmer_ES:1.0E-6,((((Night_Elves_WC:1.0E-6,(Elves_LotR:0.034324,High_Elves_WH:0.377832)[&"Bootstrap Support"=16]:0.377832)[&"Bootstrap Support"=6]:0.335718,Elves_FR:1.0E-6)[&"Bootstrap Support"=1]:0.187948,((Elves_W:0.185334,Dwarves_W:1.0E-6)[&"Bootstrap Support"=50]:0.123725,((Humans_ES:1.0E-6,((Humans_W:0.12123,(Humans_WC:0.058085,(Orcs_WC:0.119003,Humans_FR:1.0E-6)[&"Bootstrap Support"=16]:0.058085)[&"Bootstrap Support"=13]:0.058853)[&"Bootstrap Support"=4]:0.058101,(Humans_LotR:0.185334,(Humans_40K:0.518223,Humans_WH:1.0E-6)[&"Bootstrap Support"=7]:1.0E-6)[&"Bootstrap Support"=14]:0.185334)[&"Bootstrap Support"=0]:1.0E-6)[&"Bootstrap Support"=11]:0.22679,((Orcs_FR:1.0E-6,((Orks_40K:0.119003,Orcs_WH:1.0E-6)[&"Bootstrap Support"=85]:0.542888,Orcs_LotR:0.073441)[&"Bootstrap Support"=39]:0.18108)[&"Bootstrap Support"=67]:0.626475,Orsimer_ES:1.0E-6)[&"Bootstrap Support"=29]:0.226784)[&"Bootstrap Support"=1,!rotate=false]:0.130953)[&"Bootstrap Support"=1]:0.060766)[&"Bootstrap Support"=0]:0.06064,Dunmer_ES:0.056178)[&"Bootstrap Support"=0,!rotate=true]:0.123737)[&"Bootstrap Support"=0]:0.335718)[&"Bootstrap Support"=4]:0.335718)[&"Bootstrap Support"=13]:0.445085)[&"Bootstrap Support"=19]:0.266493)[&"Bootstrap Support"=29,!rotate=false]:0.390513)[&!rotate=false];
 end;
 
 begin figtree;
@@ -66,7 +63,7 @@ begin figtree;
 	set layout.expansion=0;
 	set layout.layoutType="RECTILINEAR";
 	set layout.zoom=0;
-	set legend.attribute="Bootstrap Support";
+	set legend.attribute=null;
 	set legend.fontSize=10.0;
 	set legend.isShown=false;
 	set legend.significantDigits=4;
@@ -80,13 +77,13 @@ begin figtree;
 	set nodeLabels.fontStyle=1;
 	set nodeLabels.isShown=true;
 	set nodeLabels.significantDigits=4;
-	set nodeShape.colourAttribute="User selection";
+	set nodeShape.colourAttribute=null;
 	set nodeShape.isShown=false;
 	set nodeShape.minSize=10.0;
 	set nodeShape.scaleType=Width;
 	set nodeShape.shapeType=Circle;
 	set nodeShape.size=4.0;
-	set nodeShape.sizeAttribute="Fixed";
+	set nodeShape.sizeAttribute=null;
 	set polarLayout.alignTipLabels=false;
 	set polarLayout.angularRange=0;
 	set polarLayout.rootAngle=0;

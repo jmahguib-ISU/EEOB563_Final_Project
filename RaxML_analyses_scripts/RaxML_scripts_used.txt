@@ -2,7 +2,7 @@
 
 ---------------------------------------------------------------------------------------
 
-###Scripts for checking alignment input files to see if they will run in raxml
+###Scripts for checking alignment input files to see if they will run in raxml###
 
 raxml-ng --check --msa Tolkien_concat_align.txt --model MULTI8_MK --prefix OptiCheckConcat
 raxml-ng --check --msa Tolkien_physio_align.txt --model MULTI8_MK --prefix OptiCheckPhysio
@@ -12,7 +12,7 @@ raxml-ng --check --msa Tolkien_arche_align.txt --model MULTI7_MK --prefix OptiCh
 
 ---------------------------------------------------------------------------------------
 
-###Scripts for searching the tree space of alignment files
+###Scripts for searching the tree space of alignment files###
 
 raxml-ng --msa Tolkien_concat_align.txt --outgroup Zerg_OG,Tyranids_OG,Xenomorphs_OG --model MULTI8_MK --prefix MLsearchConcat --threads 2 --seed 2 --tree pars{200},rand{200}
 
@@ -40,7 +40,7 @@ raxml-ng --msa Tolkien_arche_align_protossOG.txt --outgroup Protoss_OG --model M
 
 ---------------------------------------------------------------------------------------
 
-###Scripts for bootstrap analyses
+###Scripts for bootstrap analyses###
 
 raxml-ng --bootstrap --msa Tolkien_concat_align.txt --outgroup Zerg_OG,Tyranids_OG,Xenomorphs_OG --model MULTI8_MK --bs-trees 1000 --prefix BootstrapConcat --threads 1 --seed 2
 
@@ -61,7 +61,7 @@ raxml-ng --bootstrap --msa Tolkien_arche_align_protossOG.txt --outgroup Protoss_
 
 ---------------------------------------------------------------------------------------
 
-#Scripts for mapping bootstrap support values onto best trees
+###Scripts for mapping bootstrap support values onto best trees###
 
 raxml-ng --support --tree MLsearchConcat.raxml.bestTree --bs-trees BootstrapConcat.raxml.bootstraps --prefix MappedBootstrapsConcat --threads 1
 
