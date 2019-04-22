@@ -78,3 +78,20 @@ raxml-ng --support --tree MLsearchArcheProtossOG.raxml.bestTree --bs-trees Boots
 
 ---------------------------------------------------------------------------------------
 
+###Scripts for checking bootstrap convergence###
+
+raxml-ng --bsconverge --bs-trees BootstrapConcat.raxml.bootstraps --prefix BootstrapConcat_Converge --threads 1 --seed 2
+
+
+
+raxml-ng --bsconverge --bs-trees BootstrapPhysioProtossOG.raxml.bootstraps --prefix BootstrapPhysioProtossOG_Converge --threads 1 --seed 2
+
+
+
+raxml-ng --bsconverge --bs-trees BootstrapArcheZergOG.raxml.bootstraps --prefix BootstrapArcheZergOG_Converge --threads 1 --seed 2
+
+raxml-ng --bsconverge --bs-trees BootstrapArcheProtossOG.raxml.bootstraps --prefix BootstrapArcheProtossOG_Converge --threads 1 --seed 2
+
+
+---------------------------------------------------------------------------------------
+

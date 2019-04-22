@@ -1,0 +1,54 @@
+
+RAxML-NG v. 0.8.0 BETA released on 11.01.2019 by The Exelixis Lab.
+Authors: Alexey Kozlov, Alexandros Stamatakis, Diego Darriba, Tomas Flouri, Benoit Morel.
+Latest version: https://github.com/amkozlov/raxml-ng
+Questions/problems/suggestions? Please visit: https://groups.google.com/forum/#!forum/raxml
+
+WARNING: This is a BETA release, please use at your own risk!
+
+RAxML-NG was called at 20-Apr-2019 10:34:54 as follows:
+
+raxml-ng --bsconverge --bs-trees BootstrapArcheZergOG.raxml.bootstraps --prefix BootstrapArcheZergOG_Converge --threads 1 --seed 2
+
+Analysis options:
+  run mode: A posteriori bootstrap convergence test
+  start tree(s): 
+  random seed: 2
+  SIMD kernels: AVX
+  parallelization: NONE/sequential
+
+Reading bootstrap trees from file: BootstrapArcheZergOG.raxml.bootstraps
+Loaded 1000 trees with 33 taxa.
+
+Performing bootstrap convergence assessment using autoMRE criterion
+
+ # trees        avg WRF       avg WRF in %       # perms: wrf <= 3.00 %     converged?  
+      50        152.108             10.761                            0        NO
+     100        210.933              7.142                            2        NO
+     150        236.291              5.330                          168        NO
+     200        220.422              3.694                          461        NO
+     250        285.580              3.838                          323        NO
+     300        363.629              4.077                          158        NO
+     350        395.868              3.800                          215        NO
+     400        455.358              3.810                          230        NO
+     450        487.836              3.626                          341        NO
+     500        407.906              2.724                          678        NO
+     550        407.607              2.475                          753        NO
+     600        363.750              2.023                          878        NO
+     650        366.290              1.879                          903        NO
+     700        419.734              1.999                          854        NO
+     750        464.235              2.064                          840        NO
+     800        480.762              2.003                          870        NO
+     850        432.533              1.696                          906        NO
+     900        479.612              1.776                          930        NO
+     950        482.272              1.692                          902        NO
+    1000        528.848              1.763                          886        NO
+Bootstopping test did not converge after 1000 trees
+
+
+Execution log saved to: /home/jmahguib/EEOB563-Spring2019/Final_Project/BootstrapArcheZergOG_Converge.raxml.log
+
+Analysis started: 20-Apr-2019 10:34:54 / finished: 20-Apr-2019 10:35:53
+
+Elapsed time: 59.171 seconds
+

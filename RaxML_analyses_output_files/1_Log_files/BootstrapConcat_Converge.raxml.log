@@ -1,0 +1,54 @@
+
+RAxML-NG v. 0.8.0 BETA released on 11.01.2019 by The Exelixis Lab.
+Authors: Alexey Kozlov, Alexandros Stamatakis, Diego Darriba, Tomas Flouri, Benoit Morel.
+Latest version: https://github.com/amkozlov/raxml-ng
+Questions/problems/suggestions? Please visit: https://groups.google.com/forum/#!forum/raxml
+
+WARNING: This is a BETA release, please use at your own risk!
+
+RAxML-NG was called at 20-Apr-2019 10:32:40 as follows:
+
+raxml-ng --bsconverge --bs-trees BootstrapConcat.raxml.bootstraps --prefix BootstrapConcat_Converge --threads 1 --seed 2
+
+Analysis options:
+  run mode: A posteriori bootstrap convergence test
+  start tree(s): 
+  random seed: 2
+  SIMD kernels: AVX
+  parallelization: NONE/sequential
+
+Reading bootstrap trees from file: BootstrapConcat.raxml.bootstraps
+Loaded 1000 trees with 36 taxa.
+
+Performing bootstrap convergence assessment using autoMRE criterion
+
+ # trees        avg WRF       avg WRF in %       # perms: wrf <= 3.00 %     converged?  
+      50        132.616              8.043                            1        NO
+     100        206.103              6.246                           24        NO
+     150        218.301              4.410                           95        NO
+     200        267.258              4.049                          303        NO
+     250        278.585              3.377                          485        NO
+     300        305.355              3.084                          587        NO
+     350        358.902              3.107                          620        NO
+     400        585.911              4.439                           31        NO
+     450        588.441              3.963                          275        NO
+     500        560.341              3.396                          455        NO
+     550        668.341              3.682                          345        NO
+     600        539.185              2.723                          680        NO
+     650        536.887              2.503                          769        NO
+     700        518.043              2.243                          885        NO
+     750        565.973              2.287                          881        NO
+     800        596.228              2.258                          896        NO
+     850        595.241              2.122                          946        NO
+     900        571.663              1.925                          963        NO
+     950        555.132              1.771                          973        NO
+    1000        492.768              1.493                          992        YES
+Bootstopping test converged after 1000 trees
+
+
+Execution log saved to: /home/jmahguib/EEOB563-Spring2019/Final_Project/BootstrapConcat_Converge.raxml.log
+
+Analysis started: 20-Apr-2019 10:32:40 / finished: 20-Apr-2019 10:33:09
+
+Elapsed time: 28.913 seconds
+

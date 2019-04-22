@@ -1,0 +1,50 @@
+
+RAxML-NG v. 0.8.0 BETA released on 11.01.2019 by The Exelixis Lab.
+Authors: Alexey Kozlov, Alexandros Stamatakis, Diego Darriba, Tomas Flouri, Benoit Morel.
+Latest version: https://github.com/amkozlov/raxml-ng
+Questions/problems/suggestions? Please visit: https://groups.google.com/forum/#!forum/raxml
+
+WARNING: This is a BETA release, please use at your own risk!
+
+RAxML-NG was called at 17-Apr-2019 09:38:21 as follows:
+
+raxml-ng --check --msa Tolkien_physio_align.txt --model MULTI8_MK --prefix OptiCheckPhysio
+
+Analysis options:
+  run mode: Alignment validation
+  start tree(s): 
+  random seed: 1555511901
+  SIMD kernels: AVX
+  parallelization: PTHREADS (8 threads), thread pinning: OFF
+
+[00:00:00] Reading alignment from file: Tolkien_physio_align.txt
+[00:00:00] Loaded alignment with 36 taxa and 32 sites
+
+WARNING: Sequences Humans_LotR and Humans_WH are exactly identical!
+WARNING: Sequences Humans_FR and Humans_W are exactly identical!
+WARNING: Sequences Elves_FR and Elves_W are exactly identical!
+WARNING: Sequences Humans_ES and Humans_WC are exactly identical!
+WARNING: Sequences Orcs_WH and Orks_40K are exactly identical!
+WARNING: Duplicate sequences found: 5
+
+NOTE: Reduced alignment (with duplicates and gap-only sites/taxa removed) 
+NOTE: was saved to: /home/jmahguib/EEOB563-Spring2019/Final_Project/OptiCheckPhysio.raxml.reduced.phy
+
+Alignment comprises 1 partitions and 32 patterns
+
+Partition 0: noname
+Model: MULTI8_MK
+Alignment sites / patterns: 32 / 32
+Gaps: 0.00 %
+Invariant sites: 0.00 %
+
+
+Alignment can be successfully read by RAxML-NG.
+
+
+Execution log saved to: /home/jmahguib/EEOB563-Spring2019/Final_Project/OptiCheckPhysio.raxml.log
+
+Analysis started: 17-Apr-2019 09:38:21 / finished: 17-Apr-2019 09:38:21
+
+Elapsed time: 0.007 seconds
+
