@@ -1,0 +1,33 @@
+
+RAxML-NG v. 0.8.0 BETA released on 11.01.2019 by The Exelixis Lab.
+Authors: Alexey Kozlov, Alexandros Stamatakis, Diego Darriba, Tomas Flouri, Benoit Morel.
+Latest version: https://github.com/amkozlov/raxml-ng
+Questions/problems/suggestions? Please visit: https://groups.google.com/forum/#!forum/raxml
+
+WARNING: This is a BETA release, please use at your own risk!
+
+RAxML-NG was called at 25-Apr-2019 18:53:30 as follows:
+
+raxml-ng --support --tree MLsearchConcat1000_OG_P.raxml.bestTree --bs-trees BootstrapConcat_OG_P.raxml.bootstraps --prefix MappedBootstrapsConcat1000_OG_P --threads 1
+
+Analysis options:
+  run mode: Compute bipartition support (Felsenstein Bootstrap)
+  start tree(s): user
+  random seed: 1556236410
+  SIMD kernels: AVX
+  parallelization: NONE/sequential
+
+Reading reference tree from file: MLsearchConcat1000_OG_P.raxml.bestTree
+Reference tree size: 33
+
+Reading bootstrap trees from file: BootstrapConcat_OG_P.raxml.bootstraps
+Loaded 1000 trees with 33 taxa.
+
+Best ML tree with Felsenstein bootstrap (FBP) support values saved to: /home/jmahguib/EEOB563-Spring2019/Final_Project/MappedBootstrapsConcat1000_OG_P.raxml.support
+
+Execution log saved to: /home/jmahguib/EEOB563-Spring2019/Final_Project/MappedBootstrapsConcat1000_OG_P.raxml.log
+
+Analysis started: 25-Apr-2019 18:53:30 / finished: 25-Apr-2019 18:53:30
+
+Elapsed time: 0.080 seconds
+

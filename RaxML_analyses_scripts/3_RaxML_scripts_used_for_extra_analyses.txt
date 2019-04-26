@@ -1,0 +1,70 @@
+
+
+---------------------------------------------------------------------------------------
+
+###Scripts for checking alignment input files to see if they will run in raxml###
+
+
+
+
+---------------------------------------------------------------------------------------
+
+###Scripts for searching the tree space of alignment files###
+
+raxml-ng --msa Tolkien_concat_align.txt --outgroup Zerg_OG,Tyranids_OG,Xenomorphs_OG --model MULTI8_MK --prefix MLsearchConcat1000_OG_ZTX --threads 2 --seed 2 --tree pars{500},rand{500}
+
+#screen: 17413.pts-13.hpc-class
+
+
+raxml-ng --msa Tolkien_concat_align.txt --outgroup Protoss_OG,Zerg_OG,Tyranids_OG,Xenomorphs_OG --model MULTI8_MK --prefix MLsearchConcat1000_OG_PZTX --threads 2 --seed 2 --tree pars{500},rand{500}
+
+#screen: 2387.pts-27.hpc-class
+
+
+raxml-ng --msa Tolkien_concat_align_protossOG.txt --outgroup Protoss_OG --model MULTI6_MK --prefix MLsearchConcat1000_OG_P --threads 2 --seed 2 --tree pars{500},rand{500}
+
+#screen: 2681.pts-27.hpc-class
+
+
+---------------------------------------------------------------------------------------
+
+###Scripts for bootstrap analyses###
+
+raxml-ng --bootstrap --msa Tolkien_concat_align.txt --outgroup Protoss_OG,Zerg_OG,Tyranids_OG,Xenomorphs_OG --model MULTI8_MK --bs-trees 1000 --prefix BootstrapConcat_OG_PZTX --threads 1 --seed 2
+
+#screen: 2387.pts-27.hpc-class
+
+
+raxml-ng --bootstrap --msa Tolkien_concat_align_protossOG.txt --outgroup Protoss_OG --model MULTI6_MK --bs-trees 1000 --prefix BootstrapConcat_OG_P --threads 1 --seed 2
+
+#screen: 17413.pts-13.hpc-class
+
+
+---------------------------------------------------------------------------------------
+
+###Scripts for mapping bootstrap support values onto best trees###
+
+raxml-ng --support --tree MLsearchConcat1000_OG_ZTX.raxml.bestTree --bs-trees BootstrapConcat.raxml.bootstraps --prefix MappedBootstrapsConcat1000_OG_ZTX --threads 1
+
+
+
+raxml-ng --support --tree MLsearchConcat1000_OG_PZTX.raxml.bestTree --bs-trees BootstrapConcat_OG_PZTX.raxml.bootstraps --prefix MappedBootstrapsConcat1000_OG_PZTX --threads 1
+
+
+
+raxml-ng --support --tree MLsearchConcat1000_OG_P.raxml.bestTree --bs-trees BootstrapConcat_OG_P.raxml.bootstraps --prefix MappedBootstrapsConcat1000_OG_P --threads 1
+
+
+---------------------------------------------------------------------------------------
+
+###Scripts for checking bootstrap convergence###
+
+raxml-ng --bsconverge --bs-trees BootstrapConcat_OG_PZTX.raxml.bootstraps --prefix BootstrapConcat_OG_PZTX_Converge --threads 1 --seed 2
+
+
+
+raxml-ng --bsconverge --bs-trees BootstrapConcat_OG_P.raxml.bootstraps --prefix BootstrapConcat_OG_P_Converge --threads 1 --seed 2
+
+
+---------------------------------------------------------------------------------------
+
