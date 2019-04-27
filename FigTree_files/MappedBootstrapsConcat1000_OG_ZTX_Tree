@@ -1,0 +1,130 @@
+#NEXUS
+begin taxa;
+	dimensions ntax=36;
+	taxlabels
+	Altmer_ES
+	Dark_Eldar_40K
+	Dark_Elves_WH
+	Drow_FR
+	Dunmer_ES
+	Dwarves_FR
+	Dwarves_LotR
+	Dwarves_W
+	Dwarves_WC
+	Dwarves_WH
+	Dwemer_ES
+	Eldar_40K
+	Elves_FR
+	Elves_LotR
+	Elves_W
+	High_Elves_WC
+	High_Elves_WH
+	Humans_40K
+	Humans_ES
+	Humans_FR
+	Humans_LotR
+	Humans_W
+	Humans_WC
+	Humans_WH
+	Night_Elves_WC
+	Orcs_FR
+	Orcs_LotR
+	Orcs_WC
+	Orcs_WH
+	Orks_40K
+	Orsimer_ES
+	Protoss_OG
+	Squats_40K
+	Tyranids_OG
+	Xenomorphs_OG
+	Zerg_OG
+;
+end;
+
+begin trees;
+	tree tree_1 = [&R] ((Orks_40K:0.031008,((Orcs_LotR:0.097573,(Orcs_FR:1.0E-6,(Orsimer_ES:0.037085,(Orcs_WC:0.089468,(((Elves_W:0.107856,((Altmer_ES:0.125536,((((Night_Elves_WC:0.332732,Elves_LotR:0.065802)[&"Bootstrap Support"=32]:0.119952,((Protoss_OG:0.491209,Eldar_40K:0.139742)[&"Bootstrap Support"=55]:0.21101,High_Elves_WH:1.0E-6)[&"Bootstrap Support"=22]:0.038186)[&"Bootstrap Support"=16]:0.151757,High_Elves_WC:0.218547)[&"Bootstrap Support"=13]:0.075676,(Dunmer_ES:0.083564,((Dark_Elves_WH:0.04836,Dark_Eldar_40K:0.3153)[&"Bootstrap Support"=53]:0.261172,Drow_FR:0.054405)[&"Bootstrap Support"=38]:0.168959)[&"Bootstrap Support"=26]:0.171042)[&"Bootstrap Support"=14,!rotate=true]:0.045644)[&"Bootstrap Support"=17,!rotate=true]:0.117384,Elves_FR:0.099925)[&"Bootstrap Support"=11]:0.063594)[&"Bootstrap Support"=39,!rotate=true]:0.271519,((((Dwarves_WC:0.117322,(Dwemer_ES:0.459702,Dwarves_WH:0.025518)[&"Bootstrap Support"=10]:0.053745)[&"Bootstrap Support"=10]:0.058278,(Dwarves_LotR:0.140653,Dwarves_FR:0.060831)[&"Bootstrap Support"=42]:0.021078)[&"Bootstrap Support"=14]:0.096304,(Humans_40K:0.435148,Squats_40K:1.0E-6)[&"Bootstrap Support"=56,!rotate=true]:0.254026)[&"Bootstrap Support"=14]:0.129025,Dwarves_W:0.043923)[&"Bootstrap Support"=11]:0.036151)[&"Bootstrap Support"=19]:0.192659,((Humans_W:0.075391,(Humans_FR:0.014649,(Humans_WC:0.029799,(Humans_LotR:0.072105,Humans_WH:0.035458)[&"Bootstrap Support"=63]:0.089211)[&"Bootstrap Support"=14]:0.028757)[&"Bootstrap Support"=7]:0.029149)[&"Bootstrap Support"=9]:0.044153,Humans_ES:1.0E-6)[&"Bootstrap Support"=9]:0.015641)[&"Bootstrap Support"=65]:0.205323)[&"Bootstrap Support"=70,!rotate=true]:0.143409)[&"Bootstrap Support"=99,!rotate=true]:0.574858)[&"Bootstrap Support"=75,!rotate=true]:0.149896)[&"Bootstrap Support"=92,!rotate=true]:0.366025,Orcs_WH:1.0E-6)[&"Bootstrap Support"=51,!rotate=false]:0.012661)[&"Bootstrap Support"=100,!rotate=true]:0.592766,Xenomorphs_OG[&!rotate=false]:0.004676,(Zerg_OG:0.045645,Tyranids_OG:0.045395)[&"Bootstrap Support"=100,!rotate=false]:0.280658)[&"Bootstrap Support"=100];
+end;
+
+begin figtree;
+	set appearance.backgroundColorAttribute="Default";
+	set appearance.backgroundColour=#ffffff;
+	set appearance.branchColorAttribute="User selection";
+	set appearance.branchColorGradient=false;
+	set appearance.branchLineWidth=3.0;
+	set appearance.branchMinLineWidth=0.0;
+	set appearance.branchWidthAttribute="Fixed";
+	set appearance.foregroundColour=#000000;
+	set appearance.hilightingGradient=false;
+	set appearance.selectionColour=#2d3680;
+	set branchLabels.colorAttribute="Bootstrap Support";
+	set branchLabels.displayAttribute="Bootstrap Support";
+	set branchLabels.fontName=".Lucida Grande UI";
+	set branchLabels.fontSize=12;
+	set branchLabels.fontStyle=1;
+	set branchLabels.isShown=true;
+	set branchLabels.significantDigits=4;
+	set layout.expansion=0;
+	set layout.layoutType="RECTILINEAR";
+	set layout.zoom=0;
+	set legend.attribute=null;
+	set legend.fontSize=10.0;
+	set legend.isShown=false;
+	set legend.significantDigits=4;
+	set nodeBars.barWidth=4.0;
+	set nodeBars.displayAttribute=null;
+	set nodeBars.isShown=false;
+	set nodeLabels.colorAttribute="User selection";
+	set nodeLabels.displayAttribute="Node ages";
+	set nodeLabels.fontName="sansserif";
+	set nodeLabels.fontSize=8;
+	set nodeLabels.fontStyle=0;
+	set nodeLabels.isShown=false;
+	set nodeLabels.significantDigits=4;
+	set nodeShape.colourAttribute=null;
+	set nodeShape.isShown=false;
+	set nodeShape.minSize=10.0;
+	set nodeShape.scaleType=Width;
+	set nodeShape.shapeType=Circle;
+	set nodeShape.size=4.0;
+	set nodeShape.sizeAttribute=null;
+	set polarLayout.alignTipLabels=false;
+	set polarLayout.angularRange=0;
+	set polarLayout.rootAngle=0;
+	set polarLayout.rootLength=100;
+	set polarLayout.showRoot=true;
+	set radialLayout.spread=0.0;
+	set rectilinearLayout.alignTipLabels=false;
+	set rectilinearLayout.curvature=0;
+	set rectilinearLayout.rootLength=100;
+	set scale.offsetAge=0.0;
+	set scale.rootAge=1.0;
+	set scale.scaleFactor=1.0;
+	set scale.scaleRoot=false;
+	set scaleAxis.automaticScale=true;
+	set scaleAxis.fontSize=8.0;
+	set scaleAxis.isShown=false;
+	set scaleAxis.lineWidth=1.0;
+	set scaleAxis.majorTicks=1.0;
+	set scaleAxis.origin=0.0;
+	set scaleAxis.reverseAxis=false;
+	set scaleAxis.showGrid=true;
+	set scaleBar.automaticScale=true;
+	set scaleBar.fontSize=10.0;
+	set scaleBar.isShown=true;
+	set scaleBar.lineWidth=1.0;
+	set scaleBar.scaleRange=0.0;
+	set tipLabels.colorAttribute="User selection";
+	set tipLabels.displayAttribute="Names";
+	set tipLabels.fontName=".Lucida Grande UI";
+	set tipLabels.fontSize=14;
+	set tipLabels.fontStyle=2;
+	set tipLabels.isShown=true;
+	set tipLabels.significantDigits=4;
+	set trees.order=false;
+	set trees.orderType="increasing";
+	set trees.rooting=false;
+	set trees.rootingType="User Selection";
+	set trees.transform=false;
+	set trees.transformType="cladogram";
+end;
+
